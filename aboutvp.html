@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="Content/bootstrap.css" rel="stylesheet"/>
+<link href="Content/site.css" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="img/VIT.ico"/>
+
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">VIT Alumni Connect</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="" id="eeducation" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="nav-label">About Us</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="developers.html">Developers</a>
+                            </li>
+                            <li>
+                                <a href="aboutvp.html">About VIT</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="nav-label">Login</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="alumnilogin.php">Alumni</a>
+                            </li>
+                            <li>
+                                <a href="admin/adminlogin.php">Admin</a>
+                            </li>
+                            <li>
+                                <a href="eventmanager/eventmanagerlogin.php">Event Manager</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="register.php">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid body-content">
+        
+
+
+    <div class="jumbotron">
+        <h1 style="color: #01579b;">VIT | Vidyalankar Institute of Technology</h1>
+        <p class="lead">
+        <br>
+
+Vision<br>
+To achieve excellence in imparting technical education so as to meet the professional and societal needs.<br><br>
+
+Mission<br>
+1) Developing technical skills by imparting knowledge and providing hands on experience.<br>
+2) Creating an environment that nurtures ethics, leadership and team building.<br>
+3) Providing industrial exposure for minimizing the gap between academics & industry.<br>
+        </p>
+    </div>
+     <hr />
+        <footer>
+            <p>&copy; 2021 - VIT Alumni Connect</p>
+        </footer>
+    </div>
+
+    <script src="Scripts/jquery-3.3.1.js"></script>
+
+    <script src="Scripts/bootstrap.js"></script>
+
+    
+
+
+
+    <script>
+
+        const $dropdown = $(".dropdown");
+        const $dropdownToggle = $(".dropdown-toggle");
+        const $dropdownMenu = $(".dropdown-menu");
+        const showClass = "show";
+
+        $(window).on("load resize", function () {
+            if (this.matchMedia("(min-width: 768px)").matches) {
+                $dropdown.hover(
+                    function () {
+                        const $this = $(this);
+                        $this.addClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "true");
+                        $this.find($dropdownMenu).addClass(showClass);
+                    },
+                    function () {
+                        const $this = $(this);
+                        $this.removeClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "false");
+                        $this.find($dropdownMenu).removeClass(showClass);
+                    }
+                );
+            } else {
+                $dropdown.off();
+            }
+        });
+
+    </script>
+
+</body>
+</html>
